@@ -1,0 +1,118 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Heart Disease Prediction</title>
+<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="static/js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Open Heart Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+</head>
+<body> 
+<!--header-->
+
+	<!--banner-->
+	<script src="static/js/responsiveslides.min.js"></script>
+	<script>
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: true,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+  </script>
+	<div class="slider">
+	    <div class="callbacks_container">
+	      <ul class="rslides" id="slider">
+	        <li>
+	          <img src="static/images/banner.jpg" alt="">
+	          <div class="banner">
+				<h2>Heart Disease Prediction</h2>
+				<p>Prediction of Heart Disease Using Machine Learning Algorithms.</p>
+			</div>
+	        </li>
+	        <li>
+	          <img src="static/images/banner2.jpg" alt="">
+	        	 <div class="banner">
+				<h2>Heart Disease Prediction</h2>
+				<p>Prediction of Heart Disease Using Machine Learning Algorithms.</p>
+			</div>
+	        </li>
+	        <li>
+	          <img src="static/images/banner3.jpg" alt="">
+	         <div class="banner">
+				<h2>Heart Disease Prediction</h2>
+				<p>Prediction of Heart Disease Using Machine Learning Algorithms.</p>
+			</div>
+	        </li>
+	      </ul>
+	  </div>
+	  </div>
+	  <!--header-->
+		<div class="header">
+			<div class="container">			
+				<div class="logo">
+					<a href="{{url_for('index')}}"><img src="static/images/logo.png" alt=" " /></a>
+				</div>
+				<div class="top-nav">
+					<span class="menu"> </span>
+					<ul>
+						<li class="active" ><a href="{{url_for('index')}}" class="scroll">HOME </a></li>
+						<li><a href="{{url_for('login')}}" class="scroll">ADMIN LOGIN </a></li>
+						<!--li><a href="404.html" class="scroll">WHO WE ARE</a></li>
+						<li><a href="gallery.html" class="scroll">GALLERY</a></li>
+						<li><a href="blog.html" class="scroll">BLOG</a></li>
+						<li><a href="contact.html" class="scroll">CONTACT US</a></li-->
+					</ul>
+					<!--script-->
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	<!---->
+	<!--content-->
+	<div class="content">
+		<div class="container">
+			<div class="donate">
+				<div class="donate-grid">
+					<h1><strong>ABSTRACT</strong></h1><p align="justify"><font face="verdana">Health care field has a vast amount of data, for processing those data certain techniques are used. Data mining is one of the techniques often used. Heart disease is the Leading cause of death worldwide. This System predicts the arising possibilities of Heart Disease. The outcomes of this system provide the chances of occurring heart disease in terms of percentage. The datasets used are classified in terms of medical parameters. This system evaluates those parameters using data mining classification technique. The datasets are processed in python programming using two main Machine Learning Algorithm namely Decision Tree Algorithm and Naive Bayes Algorithm which shows the best algorithm among these two in terms of accuracy level of heart disease.</font></p>
+				</div>
+				<br/>
+				<br/>
+					
+				<a href="{{url_for('login')}}" class="btn  btn-1c">LOGIN</a>
+				
+			</div>	
+		</div>
+		<!---->
+			<!---->
+			
+	</div>
+	<!--footer-->
+
+</body>
+</html>

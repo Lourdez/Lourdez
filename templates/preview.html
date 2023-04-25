@@ -1,0 +1,103 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/ -->
+   
+<!DOCTYPE html>
+<html>
+<head>
+<title>Heart Disease Prediction</title>
+<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="static/js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Open Heart Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!--//fonts-->
+</head>
+<body> 
+<!--header-->
+	<div class="banner-in">
+		<div class="container">
+			<h6>HOME / <span>DATA-VIEW</span></h6>
+		</div>
+	</div>
+	  <!--header-->
+		<div class="header">
+			<div class="container">			
+				<div class="logo">
+					<a href="{{url_for('index')}}"><img src="static/images/logo.png" alt=" " /></a>
+				</div>
+				<div class="top-nav">
+					<span class="menu"> </span>
+					<ul>
+						<li><a href="{{url_for('index')}}" class="scroll">HOME </a></li>					
+						<!--li><a href="{{url_for('login')}}" class="scroll">ADMIN LOGIN  </a></li-->
+						<li><a href="{{url_for('upload')}}" class="scroll">UPLOAD</a></li>
+						<li class="active"><a href="{{url_for('preview')}}" class="scroll">DATA-VIEW</a></li>
+						<!--li><a href="blog.html" class="scroll">BLOG</a></li>
+						<li><a href="contact.html" class="scroll">CONTACT US</a></li-->
+					</ul>
+					<!--script-->
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	<!---->
+	<!--content-->
+	<div class="content">
+		<div class="container">
+			<div class="project">
+				<h3>DATA VIEW</h3>
+                <br>
+                <br>
+{{ df_view.to_html(classes="table striped",na_rep="-") | safe}}
+			</div>
+		</div>
+	</div>
+   <!--center> <a href="{{url_for('analyze_form')}}" class="btn  btn-1c">TRAIN</a>    <center--> 
+   <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> TRAIN </button>  </center> 
+<br>
+<br>
+   <!-- Modal -->
+
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" style="width:1080px;height:500px">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Accuracy Rate of Classification Techniques</h3>
+		<span style="float:right"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="{{url_for('analyze_form')}}" class="btn btn-primary">Analyze >></a></span>
+        <!--button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button-->
+      </div>
+      <div class="modal-body">
+          <img src="static/images/comparison.png" width="1050px" height="500px" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+	<!--footer-->
+
+</body>
+</html>

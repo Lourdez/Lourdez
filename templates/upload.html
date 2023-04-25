@@ -1,0 +1,77 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Heart Disease Prediction</title>
+<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="static/js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Open Heart Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+</head>
+<body> 
+<!--header-->
+	<div class="banner-in">
+		<div class="container">
+			<h6>HOME / <span>UPLOAD DATASET</span></h6>
+		</div>
+	</div>
+	  <!--header-->
+		<div class="header">
+			<div class="container">			
+				<div class="logo">
+					<a href="{{url_for('index')}}"><img src="static/images/logo.png" alt=" " /></a>
+				</div>
+				<div class="top-nav">
+					<span class="menu"> </span>
+					<ul>
+						<li><a href="{{url_for('index')}}" class="scroll">HOME </a></li>					
+						<!--li><a href="{{url_for('login')}}" class="scroll">ADMIN LOGIN  </a></li-->
+						<li class="active"><a href="{{url_for('upload')}}" class="scroll">UPLOAD</a></li>
+						<!--li><a href="{{url_for('preview')}}" class="scroll">DATA-VIEW</a></li-->
+						<li><a href="{{url_for('analyze_form')}}" class="scroll">ANALYZE</a></li>
+						<!--li><a href="contact.html" class="scroll">CONTACT US</a></li-->
+					</ul>
+					<!--script-->
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	<!---->
+	<!--content-->
+	<div class="content">
+		<div class="container">
+		<div class="page-found">
+			<div class="page-not-found">
+                   <form action="http://localhost:5000/preview" name="fs" id="fs" method="post" enctype=multipart/form-data>
+                       <br/>
+                       <input type="file" name="datasetfile" id="file1" required />
+                       <br/>
+                    <input type="submit" style="margin-left:-145px" class="btn btn-primary btn-round" value="Upload">
+                      </form>
+                  </div>
+		</div>  
+	</div>
+</body>
+</html>

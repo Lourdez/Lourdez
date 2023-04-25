@@ -1,0 +1,141 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Heart Disease Prediction </title>
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="static/js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Open Heart Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+ <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+        function login(){
+        var uname = document.getElementById("uname").value;
+        var pwd = document.getElementById("pwd").value;
+
+	if(uname == "admin" && pwd == "admin")
+	{
+	  alert("Login Success!");
+	  window.location = "{{url_for('upload')}}";
+	  return false;
+	}
+	else
+	{
+	alert("Invalid Credentials!")
+	}
+        }
+    </script>
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+<style>
+.container input[type=text],input[type=password] {
+height: 35px;
+}
+</style>
+</head>
+<body> 
+<!--header-->
+	<div class="banner-in">
+		<div class="container">
+			<h6>HOME / <span>LOGIN</span></h6>
+		</div>
+	</div>
+	  <!--header-->
+		<div class="header">
+			<div class="container">			
+				<div class="logo">
+					<a href="{{url_for('index')}}"><img src="static/images/logo.png" alt=" " /></a>
+				</div>
+				<div class="top-nav">
+					<span class="menu"> </span>
+					<ul>
+						<li  ><a href="{{url_for('index')}}" class="scroll">HOME </a></li>						
+						<li class="active"><a href="{{url_for('login')}}" class="scroll">ADMIN LOGIN  </a></li>
+						<!--li><a href="{{url_for('upload')}}" class="scroll">UPLOAD DATASET</a></li>
+						<li><a href="gallery.html" class="scroll">GALLERY</a></li>
+						<li><a href="blog.html" class="scroll">BLOG</a></li>
+						<li><a href="contact.html" class="scroll">CONTACT US</a></li-->
+					</ul>
+					<!--script-->
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+
+
+<div class="container">
+                <br>
+				<br>
+				<br>
+				<br>
+			
+    <div class="row" style="margin-left: 200px;">
+		<div class="span12">
+			<div class="form-horizontal">
+			  <fieldset>
+			    <div id="legend">
+			     <h1 class="" style="margin-left:275px">Login</h1>
+			    </div>
+				<br>
+				<br>
+			    <div class="control-group">
+			      <!-- Username -->
+			      <label class="control-label"  for="username">Username</label>
+			      <div class="controls">
+			        <input type="text" id="uname" name="uname" placeholder="" class="input-xlarge">
+			      </div>
+			    </div>
+			    <div class="control-group">
+			      <!-- Password-->
+			      <label class="control-label" for="password">Password</label>
+			      <div class="controls">
+			        <input type="password" id="pwd" name="pwd" placeholder="" class="input-xlarge">
+			      </div>
+			    </div>
+			    <div class="control-group">
+			      <!-- Button -->
+			      <div class="controls">
+			        <input type="button" class="btn btn-success" value="Login" style="margin-left: 60px" onclick="login()">
+			      </div>
+			    </div>
+			  </fieldset>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

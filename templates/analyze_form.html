@@ -1,0 +1,222 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Heart Disease Prediction </title>
+<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="static/js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Open Heart Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+</head>
+<body> 
+<!--header-->
+	<div class="banner-in">
+		<div class="container">
+			<h6>HOME / <span>ANALYZE</span></h6>
+		</div>
+	</div>
+	  <!--header-->
+		<div class="header">
+			<div class="container">			
+				<div class="logo">
+					<a href="{{url_for('index')}}"><img src="static/images/logo.png" alt=" " /></a>
+				</div>
+				<div class="top-nav">
+					<span class="menu"> </span>
+					<ul>
+						<li><a href="{{url_for('index')}}" class="scroll">HOME </a></li>					
+						<li><a href="{{url_for('login')}}" class="scroll">ADMIN LOGIN  </a></li>
+						<li><a href="{{url_for('upload')}}" class="scroll">UPLOAD</a></li>
+						<!--li><a href="{{url_for('preview')}}" class="scroll">DATA-VIEW</a></li-->
+						<li class="active"><a href="{{url_for('analyze_form')}}"  class="scroll">ANALYZE</a></li>
+						<!--li><a href="contact.html" class="scroll">RESULT</a></li-->
+					</ul>
+					<!--script-->
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	<!---->
+	<!--content-->
+	<div class="content">
+		<div class="container">
+			<div class="blog">
+			<h3>ANALYZE</h3>
+
+
+<form action="{{ url_for('analyze')}}" method="POST" oninput="output.value = oldpeak.valueAsNumber,output2.value = ca.valueAsNumber">
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Age</label>
+    <input type="number" class="form-control" id="age" name="age" placeholder="Age">
+  </div>
+
+  <label for="radio">Gender</label>
+  <div class="form-check">
+  <input class="form-check-input" type="radio" name="sex" id="sex" value="1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    Male
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="sex" id="sex" value="0">
+  <label class="form-check-label" for="exampleRadios2">
+    Female
+  </label>
+</div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Chest Pain Type</label>
+    <select class="form-control" id="cp" name="cp">
+	 <option value="" disabled selected>Select Chest Pain Type</option>
+    <option value="0">Typical Angina(0)</option>
+    <option value="1">Atypical Angina(1)</option>
+    <option value="2">Non-anginal Pain(2)</option>
+    <option value="3">Asymptomatic(3)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Resting BP(mm Hg)</label>
+    <input type="number" class="form-control" id="trestbps" name="trestbps"  placeholder="Resting BP">
+  </div>
+   <div class="form-group">
+    <label for="exampleFormControlInput1">Cholestrol(mg/dl)</label>
+    <input type="number" class="form-control" id="chol" name="chol" placeholder="Resting BP">
+  </div>
+
+  <label for="radio">Is Fasting Blood Sugar > 120 mg/dl(FBS)</label>
+  <div class="form-check">
+  <input class="form-check-input" type="radio" id="fbs" name="fbs" value="1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    Yes
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" id="fbs" name="fbs" value="0">
+  <label class="form-check-label" for="exampleRadios2">
+   No
+  </label>
+</div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Resting ECG</label>
+    <select class="form-control" id="restecg" name="restecg">
+	 <option value="" disabled selected>Select</option>
+    <option value="0">Normal(0)</option>
+    <option value="1">ST-T(1)</option>
+    <option value="2">Probable(2)</option>
+    </select>
+  </div>
+
+   <div class="form-group">
+    <label for="exampleFormControlInput1">Max Heart Rate Achieved</label>
+    <input type="number" class="form-control" id="thalach" name="thalach" placeholder="HRA">
+  </div>
+
+    <label for="radio">Exercise Induced Angina</label>
+  <div class="form-check">
+  <input class="form-check-input" type="radio" id="exang" name="exang" value="1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    Yes
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" id="exang" name="exang" value="0">
+  <label class="form-check-label" for="exampleRadios2">
+   No
+  </label>
+</div>
+
+
+  <div class="form-group">
+    <label for="formControlRange">Old Peak</label>
+	  <div class="range">
+      <input type="range" id="oldpeak" name="oldpeak" min="0" max="5" value="0" step="0.1">
+      <div class="range-output">
+        <output class="output" name="output" for="range">
+          0.0
+        </output>
+      </div>
+    </div>
+
+
+ 
+
+ <div class="form-group">
+    <label for="exampleFormControlSelect1">Slope</label>
+    <select class="form-control" id="slope" name="slope">
+	 <option value="" disabled selected>Select</option>
+    <option value="0">Nothing(0)</option>
+    <option value="1">Upsloping(1)</option>
+    <option value="2">Flat(2)</option>
+	<option value="2">Downsloping(3)</option>
+    </select>
+  </div>
+
+    <div class="form-group">
+    <label for="formControlRange">No. of Major Vessels</label>
+	  <div class="range">
+      <input type="range" id="ca" name="ca" min="0" max="5" value="1" step="1">
+      <div class="range-output">
+        <output class="output" name="output2" for="range">
+          0.0
+        </output>
+      </div>
+    </div>
+
+	
+ <div class="form-group">
+    <label for="exampleFormControlSelect1">Thalassemia</label>
+    <select class="form-control" id="thal" name="thal">
+  <option value="" disabled selected>Select</option>
+  <option value="1">Normal(1)</option>
+  <option value="2">Fixed(2)</option>
+  <option value="3">Reversable(3)</option>
+    </select>
+  </div>
+
+
+  	
+ <div class="form-group">
+    <label for="exampleFormControlSelect1">Select Algorithm</label>
+    <select class="form-control" id="role" name="model_choice">
+	<option value="" disabled selected>Select Model</option>
+     <option value="lrmodel">Logistic Regression</option>
+ 
+	<option value="nbmodel">Naive Bayes</option>
+    <option value="dtmodel">Decision Tree</option>
+	 <option value="rfmodel">Random Forest</option>
+    </select>
+  </div>
+  
+<center><input type="submit" value="Predict" class="btn btn-small black  waves-light btn-extend">
+<input type="reset" value="Clear" class="btn btn-small black  waves-light btn-extend">   
+</center
+
+</form>
+
+</body>
+</html>
